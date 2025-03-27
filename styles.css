@@ -1,21 +1,144 @@
-.dashboard img {
-  width: calc(30px + 0.5vw);
-  height: calc(30px + 0.5vw);
+:root {
+  --primary-color: rgb(78, 138, 207);
+  --secondary-color: rgb(253, 189, 69);
 }
 
-img {
-  width: calc(15px + 0.5vw);
-  height: calc(15px + 0.5vw);
+html {
+  font-family: "Roboto", sans-serif;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
+/* move this later */
 button.search-btn {
   all: unset;
   display: flex;
   align-items: center;
   cursor: pointer;
+}
+
+img {
+  width: calc(10px + 0.5vw);
+  height: calc(10px + 0.5vw);
+}
+
+body {
+  /* min-height: 100vh;
+  width: 100%; */
+  display: grid;
+  grid-template-areas:
+    "sidebar header"
+    "sidebar main";
+  grid-template-rows: 0.8fr 4fr;
+  grid-template-columns: 15rem 1fr;
+}
+
+/* --- Sidebar --- */
+.sidebar {
+  grid-area: sidebar;
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Sidebar links / menuitems */
+.sidebar a {
+  text-decoration: none;
+  color: inherit;
+  display: grid;
+  grid-template-columns: 50px auto;
+  align-items: center;
+  padding-left: 10px;
+}
+
+/* Sidebar - Dashboard */
+.sidebar .dashboard {
+  margin: 15px 0 30px 0;
+}
+
+.sidebar .dashboard img {
+  width: calc(30px + 0.5vw);
+  height: calc(30px + 0.5vw);
+}
+
+.sidebar h1 {
+  font-size: 25px;
+}
+
+/* Sidebar - Top & Bottom Navs  */
+.sidebar .top-nav img,
+.sidebar .bottom-nav img {
+  padding-left: 6px;
+  width: calc(10px + 0.5vw);
+  height: calc(10px + 0.5vw);
+}
+
+.sidebar .top-nav,
+.sidebar .bottom-nav {
+  font-size: 18px;
+}
+
+.sidebar .top-nav ul > *,
+.sidebar .bottom-nav ul > * {
+  padding: 8px 0;
+}
+
+.sidebar .bottom-nav {
+  margin-top: 50px;
+}
+
+/* --- Header --- */
+.top-header > * {
+  border: 1px solid black;
+}
+
+header {
+  grid-area: header;
+  border: 1px solid black;
+}
+
+.top-header {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+}
+
+.top-header > * {
+  display: flex;
+  align-items: center;
+}
+
+/* Header - Search */
+.top-header .search {
+  padding: 1rem 2rem;
+}
+
+.top-header .search-btn {
+  padding-right: 1rem;
+}
+
+.top-header input {
+  width: min(80%, 600px);
+  border: 0;
+  background-color: rgb(213, 225, 236);
+  border-radius: 15px;
+  height: 25px;
+}
+
+/* Header - Account */
+.top-header .account {
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.account img {
+  width: calc(15px + 0.5vw);
+  height: calc(15px + 0.5vw);
+}
+.account .avatar {
+  width: calc(30px + 0.7vw);
+  height: calc(30px + 0.7vw);
+  border-radius: 50%;
+}
+
+/* --- Main Content --- */
+.content {
+  grid-area: main;
+  border: 1px solid black;
 }

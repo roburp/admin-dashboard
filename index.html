@@ -17,8 +17,12 @@
   <body>
     <!-- Sidebar -->
     <aside class="sidebar">
-      <h1 class="dashboard"><img src="icons/dashboard.svg" alt="" /> Dashboard</h1>
-
+      <nav class="dashboard">
+        <a href="#">
+          <img src="icons/dashboard.svg" alt="" />
+          <h1>Dashboard</h1>
+        </a>
+      </nav>
       <nav class="top-nav">
         <ul>
           <li class="menuItem">
@@ -87,13 +91,10 @@
     <!-- Header -->
     <header>
       <section class="top-header">
-        <div class="search">
-          <form action="#" method="GET">
-            <label for="search" class="visually-hidden">Search</label>
-            <button class="search-btn" type="submit"><img src="icons/search.svg" alt="" /></button>
-            <input type="text" id="search" name="search" />
-          </form>
-        </div>
+        <form class="search" action="#" method="GET">
+          <button class="search-btn" type="submit"><img src="icons/search.svg" alt="" /></button>
+          <input type="text" id="search" name="search" />
+        </form>
         <div class="account">
           <img src="icons/notification.svg" alt="" />
           <img class="avatar" src="https://github.com/roburp.png" alt="" />
@@ -115,6 +116,156 @@
     </header>
 
     <!-- Main Content -->
-    <div class="content"></div>
+    <main class="content">
+      <!-- Projects Section -->
+      <section class="projects">
+        <h3>Your Projects</h3>
+
+        <div class="cards">
+          <div class="card">
+            <h4 class="card-title">Super Cool Project</h4>
+            <p class="card-text">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur,
+              adipisicing elit. Vel, asperiores omnis reprehenderit sit magnam, quaerat exercitationem cupiditate nam.
+            </p>
+            <div class="card-actions">
+              <img src="icons/star.svg" alt="" />
+              <img src="icons/eye.svg" alt="" />
+              <img src="icons/share.svg" alt="" />
+            </div>
+          </div>
+
+          <div class="card">
+            <h4 class="card-title">Less Cool Project</h4>
+            <p class="card-text">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque suscipit, nihil iure incidunt beatae sit
+              modi laudantium, hic provident quaerat quis obcaecati ab illo eaque molestias nesciunt quia consequuntur.
+              Reiciendis! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum quis corrupti perferendis
+              eveniet distinctio dolore sed inventore officiis sapiente accusantium, odio eaque nihil voluptatem alias,
+              praesentium nam minima modi voluptatibus.
+            </p>
+            <div class="card-actions">
+              <img src="icons/star.svg" alt="" />
+              <img src="icons/eye.svg" alt="" />
+              <img src="icons/share.svg" alt="" />
+            </div>
+          </div>
+
+          <div class="card">
+            <h4 class="card-title">Impossible App</h4>
+            <p class="card-text">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam, quia eius accusantium tempore corporis
+              molestias laborum repellat cum, consequatur, laboriosam debitis? Sint, quam? Unde ea itaque alias
+              obcaecati neque vitae.
+            </p>
+            <div class="card-actions">
+              <img src="icons/star.svg" alt="" />
+              <img src="icons/eye.svg" alt="" />
+              <img src="icons/share.svg" alt="" />
+            </div>
+          </div>
+
+          <div class="card">
+            <h4 class="card-title">Easy Peasy App</h4>
+            <p class="card-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis natus quia aspernatur officiis
+              laboriosam explicabo temporibus eius cupiditate, in ex quaerat esse suscipit corporis quo repellat nulla
+              architecto, ipsum voluptatibus?
+            </p>
+            <div class="card-actions">
+              <img src="icons/star.svg" alt="" />
+              <img src="icons/eye.svg" alt="" />
+              <img src="icons/share.svg" alt="" />
+            </div>
+          </div>
+
+          <div class="card">
+            <h4 class="card-title">Ad Blocker</h4>
+            <p class="card-text">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur,
+              adipisicing elit. Vel, asperiores omnis reprehenderit sit magnam, quaerat exercitationem cupiditate nam.
+            </p>
+            <div class="card-actions">
+              <img src="icons/star.svg" alt="" />
+              <img src="icons/eye.svg" alt="" />
+              <img src="icons/share.svg" alt="" />
+            </div>
+          </div>
+
+          <div class="card">
+            <h4 class="card-title">Money Maker</h4>
+            <p class="card-text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum quam suscipit obcaecati, vitae explicabo,
+              unde mollitia temporibus deserunt, accusamus est quaerat similique alias. Quo laudantium animi, autem
+              possimus esse expedita! Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, distinctio? Enim
+              qui modi alias itaque, recusandae officia aut odio.
+            </p>
+            <div class="card-actions">
+              <img src="icons/star.svg" alt="" />
+              <img src="icons/eye.svg" alt="" />
+              <img src="icons/share.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Announcements & Trending-->
+
+      <section class="announcements">
+        <h3>Announcements</h3>
+        <ul class="card">
+          <li class="announcement">
+            <h4 class="card-title">Site Maintenance</h4>
+            <p class="card-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla nihil error expedita vitae, provident dolor
+              ducimus. Sed, nesciunt. Laudantium minima dolor, harum consectetur maxime asperiores enim ad voluptas eius
+              unde?
+            </p>
+          </li>
+          <li class="announcement">
+            <h4 class="card-title">Community Share Day</h4>
+            <p class="card-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum iste quasi dicta quidem doloremque
+              voluptate debitis sint blanditiis deleniti enim corrupti excepturi, quis ex, tempore itaque nulla
+              repudiandae amet cupiditate!
+            </p>
+          </li>
+          <li class="announcement">
+            <h4 class="card-title">Updated Privacy Policy</h4>
+            <p class="card-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, explicabo amet. Mollitia, iure officiis
+              accusantium ad molestiae eum labore. Iusto numquam hic eveniet ex beatae perspiciatis unde animi aperiam
+              inventore!
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="trending">
+        <h3>Trending</h3>
+        <ul class="card">
+          <li class="trend">
+            <img src="https://www.github.com/tegan.png" alt="" />
+            <p class="user">@tegan</p>
+            <p class="description">World Peace Builder</p>
+          </li>
+          <li class="trend">
+            <img src="https://www.github.com/morgan.png" alt="" />
+            <p class="user">@morgan</p>
+            <p class="description">Super Cool Project</p>
+          </li>
+          <li class="trend">
+            <img src="https://www.github.com/kendall.png" alt="" />
+            <p class="user">@kendall</p>
+            <p class="description">Life Changing App</p>
+          </li>
+          <li class="trend">
+            <img src="https://www.github.com/alex.png" alt="" />
+            <p class="user">@alex</p>
+            <p class="description">No Traffic Maker</p>
+          </li>
+        </ul>
+      </section>
+    </main>
   </body>
 </html>
