@@ -26,12 +26,12 @@ body {
 
 /* --- Sidebar --- */
 .sidebar {
-  height: 100%;
   grid-area: sidebar;
   background-color: var(--primary-color);
   color: white;
   position: fixed;
   width: 15rem;
+  height: 100%;
   overflow: auto;
 }
 
@@ -268,10 +268,16 @@ button.search-btn {
 .projects .card .card-title {
   font-size: 1.1rem;
   font-weight: 500;
+  margin-bottom: 0.5rem;
 }
 
 .projects .card .card-text {
   color: grey;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  /* Number of lines before "..." */
+  -webkit-line-clamp: 4;
+  overflow: hidden;
 }
 
 .projects .card .card-actions {
