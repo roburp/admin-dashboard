@@ -85,18 +85,15 @@ body {
 }
 
 /* --- Header --- */
-.top-header > * {
-  border: 1px solid black;
-}
-
 header {
   grid-area: header;
   border: 1px solid black;
 }
 
 .top-header {
-  display: grid;
-  grid-template-columns: 1fr max-content;
+  display: flex;
+  padding: 1rem 1.5rem;
+  gap: 2rem;
 }
 
 .top-header > * {
@@ -104,27 +101,34 @@ header {
   align-items: center;
 }
 
-/* Header - Search */
+/* (Top) Header - Search */
 .top-header .search {
-  padding: 1rem 2rem;
+  flex: 1;
 }
 
 .top-header .search-btn {
-  padding-right: 1rem;
+  padding-right: 1rem; */
+}
+
+.top-header img {
+  height: 20px;
+  width: 20px;
 }
 
 .top-header input {
   width: min(80%, 600px);
+  min-width: 150px;
   border: 0;
   background-color: rgb(213, 225, 236);
   border-radius: 15px;
   height: 25px;
 }
 
-/* Header - Account */
+/* (Top) Header - Account */
 .top-header .account {
-  justify-content: flex-end;
-  gap: 1rem;
+  flex: 1 2 0;
+  justify-content: center;
+  gap: 1.5rem;
 }
 
 .account img {
@@ -136,6 +140,13 @@ header {
   height: calc(30px + 0.7vw);
   border-radius: 50%;
 }
+
+.account .account-name {
+  font-weight: 800;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+/* (Bottom) Header - Profile */
 
 /* --- Main Content --- */
 .content {
