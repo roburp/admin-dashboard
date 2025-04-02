@@ -226,7 +226,7 @@ button.search-btn {
   display: grid;
   height: 100%;
 
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 5fr minmax(20ch, 1fr);
   /* 1fr auto */
   grid-template-rows: min-content 1fr;
   /* 1fr 1fr */
@@ -234,8 +234,6 @@ button.search-btn {
   grid-template-areas:
     "projects announcements"
     "projects trending";
-
-  border: 1px solid red;
 }
 
 .content h3 {
@@ -249,20 +247,32 @@ button.search-btn {
   grid-area: projects;
 }
 
+.card {
+  border-radius: 8px;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.projects .card {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.5rem 1.5rem 1rem;
+}
+
+.projects .card {
+  background-color: white;
+  border-left: 8px solid orange;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.5rem 1.5rem 1rem;
+  position: relative;
+}
+
 .projects .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-auto-rows: 250px;
   gap: 2rem;
-  border: 1px solid black;
-}
-
-.projects .card {
-  background-color: white;
-  border-left: 5px solid orange;
-  display: flex;
-  flex-direction: column;
-  padding: 2rem 1.5rem 1.5rem 1rem;
 }
 
 .projects .card .card-title {
@@ -285,18 +295,78 @@ button.search-btn {
   margin-top: auto;
   display: flex;
   gap: 1rem;
-  /* background-color: red; */
 }
 
+/* Announcements */
 .announcements {
   grid-area: announcements;
 }
 
 .announcement {
-  width: 25ch;
   padding: 1rem 0;
 }
 
+.announcements .card {
+  background-color: white;
+  padding: 0.8rem 1.5rem 1rem 1.5rem;
+}
+
+.announcements .card .card-title {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+
+.announcements .card .card-text {
+  font-size: 0.8rem;
+  color: grey;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  /* Number of lines before "..." */
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.announcement + .announcement {
+  border-top: 1px solid lightgrey;
+}
+
+/* Trending */
 .trending {
   grid-area: trending;
+}
+
+.trending .card {
+  background-color: white;
+  padding: 1.5rem;
+}
+
+.trending .trend {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  cursor: pointer;
+}
+
+.trend img {
+  width: calc(30px + 0.7vw);
+  height: calc(30px + 0.7vw);
+  border-radius: 50%;
+}
+
+.trend-context {
+  font-size: 0.9rem;
+}
+
+.trend-context .user {
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+}
+
+.trend-context .description {
+  color: grey;
+}
+
+.trend + .trend {
+  margin-top: 1rem;
 }
