@@ -131,6 +131,7 @@ button.search-btn {
   background-color: var(--secondary-color);
   border-radius: 15px;
   height: 25px;
+  padding-left: 10px;
 }
 
 /* (Top) Header - Account */
