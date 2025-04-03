@@ -254,13 +254,6 @@ button.search-btn {
 
 .projects .card {
   background-color: white;
-  display: flex;
-  flex-direction: column;
-  padding: 2rem 1.5rem 1.5rem 1rem;
-}
-
-.projects .card {
-  background-color: white;
   border-left: 8px solid orange;
   display: flex;
   flex-direction: column;
